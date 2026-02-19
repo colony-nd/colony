@@ -1,33 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Schedule Manager</title>
+    <title>스케줄 매니저 - 효율적인 시간 관리 도구</title>
+    <meta name="description" content="온라인 스케줄 매니저를 통해 일정을 관리하고 시간 관리 팁을 얻으세요.">
     <link href='/style.css' rel='stylesheet'>
 </head>
 <body>
-    <button id="theme-toggle">🌓 Theme</button>
-    <div id="calendar-container">
-        <div id="calendar-header">
-            <button id="prev-month-btn">&lt;</button>
-            <h2 id="current-month"></h2>
-            <button id="next-month-btn">&gt;</button>
-        </div>
-        <div id="calendar"></div>
-    </div>
-    <div id="schedule-container">
-        <h3 id="selected-date"></h3>
-        <div id="time-slots"></div>
-    </div>
+    <header>
+        <nav>
+            <div class="logo">📅 Schedule Manager</div>
+            <ul class="nav-links">
+                <li><a href="#calendar-section">캘린더</a></li>
+                <li><a href="#blog-section">팁 & 가이드</a></li>
+                <li><a href="#about-section">소개</a></li>
+                <li><a href="#contact-section">문의</a></li>
+                <li><a href="#privacy-section">개인정보처리방침</a></li>
+            </ul>
+            <button id="theme-toggle">🌓 테마 변경</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="calendar-section">
+            <div id="calendar-container">
+                <div id="calendar-header">
+                    <button id="prev-month-btn">&lt;</button>
+                    <h2 id="current-month"></h2>
+                    <button id="next-month-btn">&gt;</button>
+                </div>
+                <div id="calendar"></div>
+            </div>
+            <div id="schedule-container">
+                <h3 id="selected-date">날짜를 선택하세요</h3>
+                <div id="time-slots"></div>
+            </div>
+        </section>
+
+        <section id="blog-section" class="content-section">
+            <h2>효율적인 시간 관리를 위한 팁 & 가이드</h2>
+            <div class="articles-grid">
+                <article>
+                    <h3>1. 우선순위 정하기: 아이젠하워 매트릭스</h3>
+                    <p>모든 업무가 똑같이 중요한 것은 아닙니다. 업무를 '긴급함'과 '중요함'이라는 두 가지 기준으로 나누어 보세요.</p>
+                    <ul>
+                        <li><strong>1사분면 (긴급하고 중요한 일):</strong> 즉시 처리해야 하는 업무 (마감 임박 과제 등)</li>
+                        <li><strong>2사분면 (중요하지만 긴급하지 않은 일):</strong> 장기적인 성장을 위한 업무 (자기계발, 건강 관리 등) - 여기에 가장 많은 시간을 투자해야 합니다.</li>
+                        <li><strong>3사분면 (긴급하지만 중요하지 않은 일):</strong> 방해 요소 (불필요한 회의, 일부 이메일 등)</li>
+                        <li><strong>4사분면 (긴급하지도 중요하지도 않은 일):</strong> 시간 낭비 (단순 오락 등)</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>2. 포모도로 기법: 집중력의 비밀</h3>
+                    <p>포모도로 기법은 타이머를 사용하여 25분간 집중해서 일을 한 다음 5분간 쉬는 시간 관리 방법입니다. 이 방법의 핵심은 짧은 휴식을 통해 뇌에 휴식을 주고, 다시 집중할 때 높은 효율을 내는 데 있습니다.</p>
+                    <p>4번의 포모도로(2시간) 후에는 15~30분 정도의 긴 휴식을 취하는 것이 좋습니다. 본 스케줄 매니저를 활용해 포모도로 세션을 계획해 보세요.</p>
+                </article>
+                <article>
+                    <h3>3. 멀티태스킹의 함정에서 벗어나기</h3>
+                    <p>많은 사람들이 멀티태스킹이 효율적이라고 생각하지만, 실제로는 뇌의 효율을 40% 이상 떨어뜨린다는 연구 결과가 있습니다. 한 번에 한 가지 일에만 집중하는 '싱글 태스킹'을 실천해 보세요. 캘린더에 특정 시간대를 하나의 업무 전용으로 할당하는 것이 큰 도움이 됩니다.</p>
+                </article>
+                <article>
+                    <h3>4. 디지털 스케줄러를 백분 활용하는 법</h3>
+                    <p>종이 플래너도 좋지만, 수정이 빈번하고 알림이 필요한 현대 사회에서는 디지털 도구가 필수입니다. 본 사이트와 같은 디지털 매니저를 사용하면 일정이 변경되어도 깔끔하게 관리할 수 있으며, 어디서든 자신의 계획을 확인할 수 있습니다.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="about-section" class="content-section">
+            <h2>서비스 소개</h2>
+            <p>스케줄 매니저는 바쁜 현대인들이 자신의 일정을 한눈에 파악하고 체계적으로 관리할 수 있도록 돕기 위해 제작되었습니다. 직관적인 인터페이스와 실용적인 기능을 제공합니다.</p>
+        </section>
+
+        <section id="contact-section" class="content-section">
+            <h2>문의하기</h2>
+            <p>서비스 이용 중 궁금한 점이나 제안 사항이 있으시면 아래 이메일로 연락 주시기 바랍니다.</p>
+            <p>이메일: support@example.com</p>
+        </section>
+
+        <section id="privacy-section" class="content-section">
+            <h2>개인정보처리방침</h2>
+            <p>본 사이트는 사용자의 일정을 브라우저의 로컬 저장소에 저장하며, 서버로 데이터를 전송하지 않습니다.</p>
+            <p>Google AdSense 광고를 표시하기 위해 쿠키를 사용할 수 있습니다. 사용자는 브라우저 설정에서 쿠키 사용을 거부할 수 있습니다.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Schedule Manager. All rights reserved.</p>
+    </footer>
+
     <div id="schedule-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
-            <h4>Add/Edit Schedule</h4>
+            <h4>일정 추가/수정</h4>
             <p id="modal-time"></p>
-            <textarea id="schedule-input" placeholder="Enter your schedule..."></textarea>
-            <button id="save-schedule-btn">Save</button>
-            <button id="delete-schedule-btn">Delete</button>
+            <textarea id="schedule-input" placeholder="일정을 입력하세요..."></textarea>
+            <div class="modal-footer">
+                <button id="save-schedule-btn">저장</button>
+                <button id="delete-schedule-btn">삭제</button>
+            </div>
         </div>
     </div>
     <script defer type="text/javascript" src="/main.js"></script>
