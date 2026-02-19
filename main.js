@@ -11,11 +11,24 @@ const modalTime = document.getElementById('modal-time');
 const scheduleInput = document.getElementById('schedule-input');
 const saveScheduleBtn = document.getElementById('save-schedule-btn');
 const deleteScheduleBtn = document.getElementById('delete-schedule-btn');
+const themeToggleBtn = document.getElementById('theme-toggle');
 
 let currentDate = new Date();
 let selectedDate = null;
 let selectedTime = null;
 const scheduleData = {}; // { "YYYY-MM-DD": { "HH:MM": "schedule text" } }
+
+// Theme handling
+const currentTheme = localStorage.getItem('theme') || 'light';
+if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+}
+
+themeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+    localStorage.setItem('theme', theme);
+});
 
 const renderCalendar = () => {
     calendarContainer.innerHTML = '';
